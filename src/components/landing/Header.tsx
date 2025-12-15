@@ -39,20 +39,7 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <div className="relative">
-              <div className="w-10 h-10 bg-hero-gradient rounded-lg flex items-center justify-center">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="w-6 h-6 text-primary-foreground"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-              </div>
-            </div>
+          <a href="#" className="flex items-center">
             <div className={cn(
               "transition-colors duration-300",
               isScrolled ? "text-foreground" : "text-primary-foreground"
