@@ -69,15 +69,70 @@ const Package = () => {
         >
           <div className="relative bg-card rounded-3xl overflow-hidden shadow-xl border border-border">
             {/* Header */}
-            <div className="bg-hero-gradient px-8 py-10 text-center">
+            <div className="bg-hero-gradient px-8 py-10 text-center relative overflow-hidden">
+              {/* Limited Offer Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="absolute top-4 right-4 md:top-6 md:right-6"
+              >
+                <span className="inline-flex items-center gap-1.5 bg-brand-orange text-white text-xs font-bold px-3 py-1.5 rounded-full animate-pulse shadow-lg">
+                  🔥 LIMITED OFFER
+                </span>
+              </motion.div>
+
               <span className="inline-block bg-primary-foreground/20 text-primary-foreground text-sm font-semibold px-4 py-1 rounded-full mb-4">
                 STARTER PACKAGE
               </span>
-              <div className="flex items-baseline justify-center gap-2">
-                <span className="text-primary-foreground/60 text-lg">From</span>
-                <span className="font-heading text-5xl md:text-6xl font-bold text-primary-foreground">
-                  $1,850
-                </span>
+              
+              <div className="flex flex-col items-center justify-center gap-2">
+                {/* Original Price - Strikethrough */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  className="flex items-center gap-2"
+                >
+                  <span className="text-primary-foreground/60 text-lg">Was</span>
+                  <span className="relative text-primary-foreground/50 text-2xl md:text-3xl font-semibold">
+                    $2,400
+                    <motion.span
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.5 }}
+                      className="absolute left-0 right-0 top-1/2 h-0.5 bg-brand-orange origin-left"
+                    />
+                  </span>
+                </motion.div>
+
+                {/* New Price */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.6, type: "spring", stiffness: 200 }}
+                  className="flex items-baseline gap-2"
+                >
+                  <span className="text-primary-foreground/80 text-lg">Now from</span>
+                  <span className="font-heading text-5xl md:text-6xl font-bold text-primary-foreground drop-shadow-lg">
+                    $1,850
+                  </span>
+                </motion.div>
+
+                {/* Savings Badge */}
+                <motion.span
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.8 }}
+                  className="inline-block bg-brand-green text-white text-sm font-bold px-4 py-1.5 rounded-full mt-2"
+                >
+                  SAVE $550!
+                </motion.span>
               </div>
             </div>
 
