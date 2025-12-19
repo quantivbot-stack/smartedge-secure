@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
-const GOOGLE_SHEETS_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL"; // Replace with your Google Apps Script URL
+const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbwKvYD6PWkQRfgZteEycvIjTTvAuqbJEyoP65_wv1hJrw6KRYzjaFMJxM6VGP_rh926/exec";
 
 const QuoteForm = () => {
   const { toast } = useToast();
