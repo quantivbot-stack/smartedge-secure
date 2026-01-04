@@ -79,15 +79,18 @@ const Hero = () => {
               <span>Canberra • NSW • Greater Sydney</span>
             </div>
 
-            {/* Price & CTA */}
+            {/* Promotion & CTA */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              <div>
-                <p className="text-primary-foreground/60 text-sm">Starting from</p>
-                <p className="font-heading text-4xl font-bold text-brand-cyan">$1,850</p>
+              <div className="bg-brand-orange/20 backdrop-blur-sm border border-brand-orange/30 rounded-xl px-5 py-3">
+                <p className="text-brand-orange text-xs font-semibold uppercase tracking-wide mb-1">🔥 Limited Time Offer</p>
+                <div className="flex items-center gap-3">
+                  <span className="text-primary-foreground/50 text-xl line-through">$2,500</span>
+                  <span className="font-heading text-3xl font-bold text-brand-cyan">$1,850</span>
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button variant="hero" size="xl" asChild>
-                  <a href="#contact">Get a Free Quote</a>
+                  <a href="#packages">View Package</a>
                 </Button>
                 <Button variant="heroOutline" size="xl" asChild>
                   <a href="tel:0489209281" className="flex items-center gap-2">
